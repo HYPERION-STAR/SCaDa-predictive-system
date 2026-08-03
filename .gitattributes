@@ -1,0 +1,24 @@
+# Line-ending normalization — prevents the CRLF/LF churn seen in history
+# (e.g. commit "a" reformatted whole files with no content change).
+# Text files are stored with LF in the repo; working copies get native
+# endings on checkout, so editors on any OS stop flipping line endings.
+* text=auto
+
+# C#/WPF source: keep CRLF in the working tree on every platform (LF in repo).
+*.cs       text eol=crlf
+*.xaml     text eol=crlf
+*.csproj   text eol=crlf
+*.sln      text eol=crlf
+*.manifest text eol=crlf
+
+# Binary assets — never convert.
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.ico  binary
+*.pdf  binary
+*.docx binary
+
+# Git LFS track patterns
+*.pkl  filter=lfs diff=lfs merge=lfs -text
+*.onnx filter=lfs diff=lfs merge=lfs -text

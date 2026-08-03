@@ -1,0 +1,20 @@
+# SCaDa Kestirimci Bakım — birleşik Python bağımlılıkları (tek çatı)
+# Kurulum:  python -m pip install -r requirements.txt
+
+# ── Model tahmin servisi (predict_service.py :8010) ───────────────
+fastapi>=0.115.0
+uvicorn[standard]>=0.32.0
+pydantic>=2.9.0
+numpy>=1.26.0
+pandas>=2.2.0
+scikit-learn>=1.5.0
+joblib>=1.4.0
+onnxruntime>=1.20.0
+
+# ── Veri akışı / hub (hub/) — MQTT yayıncı + FastAPI ağ geçidi ─────
+# SCaDa_engineV1.py CallbackAPIVersion.VERSION2 kullanır → paho-mqtt 2.x
+paho-mqtt>=2.0.0
+
+# ── Model eğitimi + ONNX export (opsiyonel: train_SCaDa_model.py, export_onnx.py) ──
+skl2onnx>=1.17.0
+onnx>=1.17.0

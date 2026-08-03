@@ -1,0 +1,176 @@
+# Fault Schedule - Ariza Takvimi (live_data.json birimleriyle uyumlu)
+# ================================================================
+# 24 kompresor, 4 ariza modu -> her modda 6 unit
+
+units:
+  # bearing_wear (6 unit)
+  CS-KIRKLARELI-U1:
+    unit_type: compressor
+    faults:
+      - fault_mode: bearing_wear
+        start_cycle: 4200
+        severity_ramp_cycles: 800
+
+  CS-AMBARLI-U1:
+    unit_type: compressor
+    faults:
+      - fault_mode: bearing_wear
+        start_cycle: 3500
+        severity_ramp_cycles: 900
+
+  CS-CORUM-U1:
+    unit_type: compressor
+    faults:
+      - fault_mode: bearing_wear
+        start_cycle: 5000
+        severity_ramp_cycles: 700
+
+  CS-SIVAS-U1:
+    unit_type: compressor
+    faults:
+      - fault_mode: bearing_wear
+        start_cycle: 4800
+        severity_ramp_cycles: 850
+
+  CS-DOGUBAYAZIT-U1:
+    unit_type: compressor
+    faults:
+      - fault_mode: bearing_wear
+        start_cycle: 3200
+        severity_ramp_cycles: 950
+
+  CS-CAYIRLI-U1:
+    unit_type: compressor
+    faults:
+      - fault_mode: bearing_wear
+        start_cycle: 4000
+        severity_ramp_cycles: 800
+
+  # fouling (6 unit)
+  CS-KIRKLARELI-U2:
+    unit_type: compressor
+    faults:
+      - fault_mode: fouling
+        start_cycle: 3000
+        severity_ramp_cycles: 1000
+
+  CS-AMBARLI-U2:
+    unit_type: compressor
+    faults:
+      - fault_mode: fouling
+        start_cycle: 4500
+        severity_ramp_cycles: 900
+
+  CS-CORUM-U2:
+    unit_type: compressor
+    faults:
+      - fault_mode: fouling
+        start_cycle: 3800
+        severity_ramp_cycles: 1100
+
+  CS-SIVAS-U2:
+    unit_type: compressor
+    faults:
+      - fault_mode: fouling
+        start_cycle: 5200
+        severity_ramp_cycles: 950
+
+  CS-DOGUBAYAZIT-U2:
+    unit_type: compressor
+    faults:
+      - fault_mode: fouling
+        start_cycle: 4000
+        severity_ramp_cycles: 850
+
+  CS-CAYIRLI-U2:
+    unit_type: compressor
+    faults:
+      - fault_mode: fouling
+        start_cycle: 3600
+        severity_ramp_cycles: 1000
+
+  # seal_leak (6 unit)
+  CS-KIRKLARELI-U3:
+    unit_type: compressor
+    faults:
+      - fault_mode: seal_leak
+        start_cycle: 5000
+        severity_ramp_cycles: 600
+
+  CS-AMBARLI-U3:
+    unit_type: compressor
+    faults:
+      - fault_mode: seal_leak
+        start_cycle: 4300
+        severity_ramp_cycles: 700
+
+  CS-CORUM-U3:
+    unit_type: compressor
+    faults:
+      - fault_mode: seal_leak
+        start_cycle: 5500
+        severity_ramp_cycles: 650
+
+  CS-SIVAS-U3:
+    unit_type: compressor
+    faults:
+      - fault_mode: seal_leak
+        start_cycle: 3700
+        severity_ramp_cycles: 800
+
+  CS-DOGUBAYAZIT-U3:
+    unit_type: compressor
+    faults:
+      - fault_mode: seal_leak
+        start_cycle: 4600
+        severity_ramp_cycles: 750
+
+  CS-CORUM-U4:
+    unit_type: compressor
+    faults:
+      - fault_mode: seal_leak
+        start_cycle: 4100
+        severity_ramp_cycles: 680
+
+  # surge (6 unit)
+  CS-ESKISEHIR-U1:
+    unit_type: compressor
+    faults:
+      - fault_mode: surge
+        start_cycle: 6000
+        severity_ramp_cycles: 500
+
+  CS-ESKISEHIR-U2:
+    unit_type: compressor
+    faults:
+      - fault_mode: surge
+        start_cycle: 4800
+        severity_ramp_cycles: 600
+
+  CS-ESKISEHIR-U3:
+    unit_type: compressor
+    faults:
+      - fault_mode: surge
+        start_cycle: 5300
+        severity_ramp_cycles: 550
+
+  CS-MUCUR-U1:
+    unit_type: compressor
+    faults:
+      - fault_mode: surge
+        start_cycle: 4200
+        severity_ramp_cycles: 650
+
+  CS-MUCUR-U2:
+    unit_type: compressor
+    faults:
+      - fault_mode: surge
+        start_cycle: 3900
+        severity_ramp_cycles: 700
+
+  CS-SIVAS-U4:
+    unit_type: compressor
+    faults:
+      - fault_mode: surge
+        start_cycle: 5100
+        severity_ramp_cycles: 600

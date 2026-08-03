@@ -1,0 +1,206 @@
+<Application x:Class="SCaDaDashboard.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:SCaDaDashboard"
+             StartupUri="MapWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+
+            <!-- Renk paleti (koyu endustriyel tema) -->
+            <Color x:Key="BgColor">#0F1620</Color>
+            <Color x:Key="PanelColor">#1A2634</Color>
+            <Color x:Key="CardColor">#1E2C3D</Color>
+            <Color x:Key="StrokeColor">#2E4258</Color>
+            <Color x:Key="TextColor">#E6EEF6</Color>
+            <!-- Kucuk metinlerde kontrast icin hafif acildi (eski #8CA3B8) -->
+            <Color x:Key="MutedColor">#9AAFC4</Color>
+
+            <!-- Saglik durumu renkleri (yalnizca durum anlami tasir) -->
+            <Color x:Key="HealthyColor">#2ECC71</Color>
+            <Color x:Key="WarnColor">#F1C40F</Color>
+            <Color x:Key="RiskColor">#E67E22</Color>
+            <Color x:Key="CriticalColor">#E74C3C</Color>
+            <!-- Marka vurgusu: notr etiketler icin (saglik anlami tasimaz) -->
+            <Color x:Key="AccentColor">#4ECDC4</Color>
+
+            <SolidColorBrush x:Key="BgBrush"     Color="{StaticResource BgColor}"/>
+            <SolidColorBrush x:Key="PanelBrush"  Color="{StaticResource PanelColor}"/>
+            <SolidColorBrush x:Key="CardBrush"   Color="{StaticResource CardColor}"/>
+            <SolidColorBrush x:Key="StrokeBrush" Color="{StaticResource StrokeColor}"/>
+            <SolidColorBrush x:Key="TextBrush"   Color="{StaticResource TextColor}"/>
+            <SolidColorBrush x:Key="MutedBrush"  Color="{StaticResource MutedColor}"/>
+            <SolidColorBrush x:Key="TrackBrush"  Color="#12202E"/>
+            <SolidColorBrush x:Key="HealthyBrush"  Color="{StaticResource HealthyColor}"/>
+            <SolidColorBrush x:Key="WarnBrush"     Color="{StaticResource WarnColor}"/>
+            <SolidColorBrush x:Key="RiskBrush"     Color="{StaticResource RiskColor}"/>
+            <SolidColorBrush x:Key="CriticalBrush" Color="{StaticResource CriticalColor}"/>
+            <SolidColorBrush x:Key="AccentBrush"   Color="{StaticResource AccentColor}"/>
+
+            <SolidColorBrush x:Key="TempBrush" Color="#FF6B6B"/>
+            <SolidColorBrush x:Key="PresBrush" Color="#4ECDC4"/>
+            <SolidColorBrush x:Key="VibBrush"  Color="#FFD166"/>
+
+            <!-- Kart golgesi (yumusak yukselti) -->
+            <DropShadowEffect x:Key="CardShadow" BlurRadius="18" ShadowDepth="3"
+                              Direction="270" Opacity="0.35" Color="#000000"/>
+
+            <!-- Donusturucular -->
+            <local:SeverityToBrushConverter x:Key="SeverityToBrush"/>
+            <local:MachineIdToBrushConverter x:Key="MachineIdToBrush"/>
+            <local:PercentConverter x:Key="Percent"/>
+            <local:TintBrushConverter x:Key="Tint"/>
+            <BooleanToVisibilityConverter x:Key="BoolToVis"/>
+
+            <!-- Sayisal degerler: tablo rakamlari (guncellemede yatay titreme olmaz) -->
+            <Style x:Key="NumText" TargetType="TextBlock">
+                <Setter Property="Typography.NumeralAlignment" Value="Tabular"/>
+            </Style>
+
+            <!-- Saglik cubugu (0-100) -->
+            <Style x:Key="HealthBar" TargetType="ProgressBar">
+                <Setter Property="Minimum" Value="0"/>
+                <Setter Property="Maximum" Value="100"/>
+                <Setter Property="Height" Value="14"/>
+                <Setter Property="Background" Value="{DynamicResource TrackBrush}"/>
+                <Setter Property="BorderThickness" Value="0"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="ProgressBar">
+                            <Border CornerRadius="7" Background="{TemplateBinding Background}" ClipToBounds="True">
+                                <Grid>
+                                    <Border x:Name="PART_Track"/>
+                                    <Border x:Name="PART_Indicator"
+                                            HorizontalAlignment="Left"
+                                            CornerRadius="7"
+                                            Background="{TemplateBinding Foreground}">
+                                        <!-- Ustte parlak, altta koyu sheen: cubuk daha "dolu" gorunur -->
+                                        <Border CornerRadius="7">
+                                            <Border.Background>
+                                                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                                    <GradientStop Color="#40FFFFFF" Offset="0"/>
+                                                    <GradientStop Color="#00FFFFFF" Offset="0.55"/>
+                                                    <GradientStop Color="#26000000" Offset="1"/>
+                                                </LinearGradientBrush>
+                                            </Border.Background>
+                                        </Border>
+                                    </Border>
+                                </Grid>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <!-- Bakim butonu: hover'da 100ms yumusak renk gecisi -->
+            <Style x:Key="GhostButton" TargetType="Button">
+                <Setter Property="Foreground" Value="{DynamicResource TextBrush}"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource StrokeBrush}"/>
+                <Setter Property="BorderThickness" Value="1"/>
+                <Setter Property="Padding" Value="10,4"/>
+                <Setter Property="Cursor" Value="Hand"/>
+                <Setter Property="FontSize" Value="11"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border x:Name="Bd" CornerRadius="6"
+                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                    BorderThickness="{TemplateBinding BorderThickness}">
+                                <!-- Animasyon icin dondurulmamis yerel firca -->
+                                <Border.Background>
+                                    <SolidColorBrush Color="#00000000"/>
+                                </Border.Background>
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                  Margin="{TemplateBinding Padding}"/>
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Trigger.EnterActions>
+                                        <BeginStoryboard>
+                                            <Storyboard>
+                                                <ColorAnimation Storyboard.TargetName="Bd"
+                                                                Storyboard.TargetProperty="Background.(SolidColorBrush.Color)"
+                                                                To="#25384C" Duration="0:0:0.1"/>
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </Trigger.EnterActions>
+                                    <Trigger.ExitActions>
+                                        <BeginStoryboard>
+                                            <Storyboard>
+                                                <ColorAnimation Storyboard.TargetName="Bd"
+                                                                Storyboard.TargetProperty="Background.(SolidColorBrush.Color)"
+                                                                To="#00000000" Duration="0:0:0.15"/>
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </Trigger.ExitActions>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <!-- GhostButton'un ToggleButton surumu (acikken vurgulu) -->
+            <Style x:Key="GhostToggle" TargetType="ToggleButton">
+                <Setter Property="Foreground" Value="{DynamicResource TextBrush}"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource StrokeBrush}"/>
+                <Setter Property="BorderThickness" Value="1"/>
+                <Setter Property="Padding" Value="10,4"/>
+                <Setter Property="Cursor" Value="Hand"/>
+                <Setter Property="FontSize" Value="11"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="ToggleButton">
+                            <Border x:Name="Bd" CornerRadius="6" Background="Transparent"
+                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                    BorderThickness="{TemplateBinding BorderThickness}">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                  Margin="{TemplateBinding Padding}"/>
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter TargetName="Bd" Property="Background" Value="#25384C"/>
+                                </Trigger>
+                                <Trigger Property="IsChecked" Value="True">
+                                    <Setter TargetName="Bd" Property="Background" Value="{DynamicResource AccentBrush}"/>
+                                    <Setter Property="Foreground" Value="#0F1620"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <!-- Dairesel onay kutusu (harita lejanti): Background = kategori rengi.
+                 Isaretliyken dolu renkli daire, degilken ici bos halka + soluk etiket. -->
+            <Style x:Key="CircleCheck" TargetType="CheckBox">
+                <Setter Property="Foreground" Value="{DynamicResource TextBrush}"/>
+                <Setter Property="Cursor" Value="Hand"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="CheckBox">
+                            <StackPanel Orientation="Horizontal" Background="Transparent">
+                                <Grid Width="14" Height="14" VerticalAlignment="Center">
+                                    <Ellipse x:Name="Ring" Stroke="{DynamicResource MutedBrush}"
+                                             StrokeThickness="1.3" Fill="Transparent"/>
+                                    <Ellipse x:Name="Dot" Margin="3"
+                                             Fill="{TemplateBinding Background}"/>
+                                </Grid>
+                                <ContentPresenter Margin="5,0,0,0" VerticalAlignment="Center"/>
+                            </StackPanel>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsChecked" Value="False">
+                                    <Setter TargetName="Dot" Property="Visibility" Value="Collapsed"/>
+                                    <Setter Property="Opacity" Value="0.5"/>
+                                </Trigger>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter TargetName="Ring" Property="Stroke" Value="{DynamicResource TextBrush}"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

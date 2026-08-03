@@ -1,0 +1,117 @@
+<Window x:Class="SCaDaDashboard.SettingsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Ayarlar"
+        Width="420" SizeToContent="Height" ResizeMode="NoResize"
+        WindowStartupLocation="CenterOwner"
+        FontFamily="Segoe UI"
+        Background="{DynamicResource BgBrush}">
+
+    <StackPanel Margin="22,18">
+        <TextBlock Text="VERİ KAYNAĞI" FontSize="12" FontWeight="Bold"
+                   Foreground="{DynamicResource TextBrush}"/>
+        <TextBlock Text="Harita hangi kaynaktan beslensin? Uygula ile anında geçilir."
+                   FontSize="11" Foreground="{DynamicResource MutedBrush}" Margin="0,2,0,10"/>
+
+        <RadioButton x:Name="ModeAuto" GroupName="src" Margin="0,4"
+                     Foreground="{DynamicResource TextBrush}">
+            <StackPanel>
+                <TextBlock Text="Otomatik" FontSize="13"/>
+                <TextBlock Text="SCaDa_HUB_URL → snapshot dosyası → simülasyon sırasıyla ilk bulunan"
+                           FontSize="10.5" Foreground="{DynamicResource MutedBrush}"/>
+            </StackPanel>
+        </RadioButton>
+
+        <RadioButton x:Name="ModeSim" GroupName="src" Margin="0,4"
+                     Foreground="{DynamicResource TextBrush}">
+            <StackPanel>
+                <TextBlock Text="Simülasyon" FontSize="13"/>
+                <TextBlock Text="7 düğümlü MVP ağı, kendi kendine üretilen canlı veri"
+                           FontSize="10.5" Foreground="{DynamicResource MutedBrush}"/>
+            </StackPanel>
+        </RadioButton>
+
+        <RadioButton x:Name="ModeSnap" GroupName="src" Margin="0,4"
+                     Foreground="{DynamicResource TextBrush}">
+            <StackPanel>
+                <TextBlock Text="Snapshot" FontSize="13"/>
+                <TextBlock x:Name="SnapInfo" Text="Tam ağ anlık görüntü dosyası"
+                           FontSize="10.5" Foreground="{DynamicResource MutedBrush}"/>
+            </StackPanel>
+        </RadioButton>
+
+        <RadioButton x:Name="ModeLocal" GroupName="src" Margin="0,4"
+                     Foreground="{DynamicResource TextBrush}">
+            <StackPanel>
+                <TextBlock Text="Yerel Veri (topoloji)" FontSize="13"/>
+                <TextBlock x:Name="LocalInfo" Text="Çıkarılan yerel topoloji (SCaDa_nodes.json + SCaDa_segments.json)"
+                           FontSize="10.5" Foreground="{DynamicResource MutedBrush}"/>
+            </StackPanel>
+        </RadioButton>
+
+        <RadioButton x:Name="ModeLive" GroupName="src" Margin="0,4"
+                     Foreground="{DynamicResource TextBrush}">
+            <StackPanel>
+                <TextBlock Text="Canlı" FontSize="13"/>
+                <TextBlock x:Name="LiveInfo" Text="Canlı telemetri endpoint'i (topoloji snapshot dosyasından)"
+                           FontSize="10.5" Foreground="{DynamicResource MutedBrush}"/>
+            </StackPanel>
+        </RadioButton>
+
+        <TextBlock Text="Canlı adres" FontSize="11" Foreground="{DynamicResource MutedBrush}"
+                   Margin="24,6,0,2"/>
+        <TextBox x:Name="LiveUrlBox" Margin="24,0,0,0" Padding="6,4" FontSize="12"
+                 Background="{DynamicResource CardBrush}" Foreground="{DynamicResource TextBrush}"
+                 BorderBrush="{DynamicResource StrokeBrush}"/>
+
+        <RadioButton x:Name="ModeHub" GroupName="src" Margin="0,4"
+                     Foreground="{DynamicResource TextBrush}">
+            <StackPanel>
+                <TextBlock Text="API Hub" FontSize="13"/>
+                <TextBlock Text="Kişi 2'nin FastAPI + MQTT hub'ı (HTTP yoklama)"
+                           FontSize="10.5" Foreground="{DynamicResource MutedBrush}"/>
+            </StackPanel>
+        </RadioButton>
+
+        <TextBlock Text="Hub adresi" FontSize="11" Foreground="{DynamicResource MutedBrush}"
+                   Margin="24,6,0,2"/>
+        <TextBox x:Name="HubUrlBox" Margin="24,0,0,0" Padding="6,4" FontSize="12"
+                 Background="{DynamicResource CardBrush}" Foreground="{DynamicResource TextBrush}"
+                 BorderBrush="{DynamicResource StrokeBrush}"/>
+
+        <Border BorderBrush="{DynamicResource StrokeBrush}" BorderThickness="0,1,0,0" Margin="0,14,0,0" Padding="0,12,0,0">
+            <StackPanel>
+                <TextBlock Text="GÖRÜNÜM" FontSize="10" FontWeight="Bold"
+                           Foreground="{DynamicResource MutedBrush}" Margin="0,0,0,6"/>
+                <CheckBox x:Name="LightThemeBox" Content="Açık tema" Foreground="{DynamicResource TextBrush}"
+                          Checked="Theme_Changed" Unchecked="Theme_Changed"/>
+            </StackPanel>
+        </Border>
+
+        <Border BorderBrush="{DynamicResource StrokeBrush}" BorderThickness="0,1,0,0" Margin="0,14,0,0" Padding="0,12,0,0">
+            <StackPanel>
+                <TextBlock Text="ALARM" FontSize="10" FontWeight="Bold"
+                           Foreground="{DynamicResource MutedBrush}" Margin="0,0,0,6"/>
+                <TextBlock FontSize="11" Foreground="{DynamicResource MutedBrush}" TextWrapping="Wrap" Margin="0,0,0,6"
+                           Text="Kritik eşik (%). Alarm her zaman en kötü üniteye bakar; eşiği düşürmek alarmı seyrekleştirir."/>
+                <Grid>
+                    <Slider x:Name="ThresholdSlider" Minimum="0" Maximum="40" TickFrequency="5"
+                            IsSnapToTickEnabled="True" VerticalAlignment="Center" Margin="0,0,52,0"/>
+                    <TextBlock HorizontalAlignment="Right" VerticalAlignment="Center"
+                               FontSize="12" Foreground="{DynamicResource TextBrush}"
+                               Text="{Binding Value, ElementName=ThresholdSlider, StringFormat=%{0:0}}"/>
+                </Grid>
+            </StackPanel>
+        </Border>
+
+        <TextBlock x:Name="ErrorText" Foreground="#E74C3C" FontSize="11"
+                   Margin="0,10,0,0" Visibility="Collapsed" TextWrapping="Wrap"/>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,16,0,0">
+            <Button Content="Vazgeç" Click="Cancel_Click" Style="{StaticResource GhostButton}"
+                    Padding="14,6" Margin="0,0,10,0"/>
+            <Button Content="Uygula" Click="Apply_Click" Style="{StaticResource GhostButton}"
+                    Padding="14,6" FontWeight="Bold"/>
+        </StackPanel>
+    </StackPanel>
+</Window>

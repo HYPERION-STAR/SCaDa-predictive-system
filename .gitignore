@@ -1,0 +1,88 @@
+# Virtual environment
+SCaDa_venv/
+venv/
+.venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Temp / backups
+*.tmp
+*.bak
+*.prev
+
+# Agent scratch space (throwaway analysis scripts)
+scratch/
+
+# Dallardan cekilen worktree'ler (gecici, birlestirme icin)
+_incoming/
+
+# C# build ciktilari
+**/bin/
+**/obj/
+[Bb]in/
+[Oo]bj/
+
+# .NET / C# UI (Kisi 3)
+*.user
+logs/
+crash.log
+
+# Olu legacy modeller (C-MAPSS donemi, 207 MB) - aktif olan models/SCaDa/
+models/_legacy/
+
+# Tek kullanimlik gorseller / gecici ciktilar
+image.png
+339373-harita-28112025.jpg
+CS-ESKISEHIR-01.json
+_check_snapshot.py
+live_data.json
+
+# Local-only files (never commit)
+LOCAL_AI_TASKS.md
+Makefile
+WORK_LOG.docx
+CANLI_SIMULASYON_PLANI.md
+ui/design-sandbox.html
+map.png
+SCaDa_Dijital_Ikiz_Proje_Plani.pdf
+SCaDa_live_snapshot.json
+btas.jpg
+build_topology.py
+build_snapshot.py
+PIPELINE_MAP_TODO.md
+SCaDa_nodes.json
+SCaDa_segments.json
+SCaDa_topology.json
+SCaDa_dev_snapshot.json
+chart.jpeg
+AI_HANDOFF.md
+DECISIONS.md
+UI_POLISH_IDEAS.md
+STATION_HEALTH_DISPLAY_DECISIONS.md
+
+# Local tooling
+.qwen/
+
+# Hub publisher'in urettigi runtime ciktisi (SCaDa_engineV1.py)
+hub/SCaDa_base_snapshot.json
+
+# Windows'ta /dev/null yanlislikla dizin olarak olusabiliyor (git-lfs hook)
+dev/

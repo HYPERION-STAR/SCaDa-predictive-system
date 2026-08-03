@@ -1,0 +1,402 @@
+<Window x:Class="SCaDaDashboard.MapWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:pm="clr-namespace:SCaDaDashboard.Pipeline"
+        xmlns:c="clr-namespace:SCaDaDashboard.Controls"
+        Title="Boru Hattı Ağı - Canlı Harita"
+        Height="820" Width="1280" MinHeight="560" MinWidth="900"
+        WindowStartupLocation="CenterScreen"
+        FontFamily="Segoe UI"
+        Background="{DynamicResource BgBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Üst bar -->
+        <Border Grid.Row="0" Background="{DynamicResource PanelBrush}" Padding="20,14"
+                BorderBrush="{DynamicResource StrokeBrush}" BorderThickness="0,0,0,1">
+            <Grid>
+                <StackPanel VerticalAlignment="Center">
+                    <TextBlock Text="BORU HATTI AĞI - CANLI HARİTA" FontSize="19" FontWeight="Bold"
+                               Foreground="{DynamicResource TextBrush}"/>
+                    <TextBlock Foreground="{DynamicResource MutedBrush}" FontSize="12" Margin="0,2,0,0">
+                        <Run Text="Ağ sağlığı ve akış izleme"/>
+                        <Run x:Name="SourceLabel" Text="  •  Veri kaynağı: SİMÜLASYON" Foreground="{DynamicResource AccentBrush}"/>
+                    </TextBlock>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+                    <Button Click="OpenDashboard_Click" Style="{StaticResource GhostButton}"
+                            Padding="12,6" Margin="0,0,14,0">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="&#xE90F;" FontFamily="Segoe MDL2 Assets" FontSize="12"
+                                       VerticalAlignment="Center" Margin="0,0,6,0"/>
+                            <TextBlock Text="Makine Paneli" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+                    <ToggleButton x:Name="LayersButton" Style="{StaticResource GhostToggle}"
+                                  Padding="12,6" Margin="0,0,14,0">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="&#xE81E;" FontFamily="Segoe MDL2 Assets" FontSize="12"
+                                       VerticalAlignment="Center" Margin="0,0,6,0"/>
+                            <TextBlock Text="Katmanlar" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </ToggleButton>
+                    <Popup PlacementTarget="{Binding ElementName=LayersButton}" Placement="Bottom"
+                           IsOpen="{Binding IsChecked, ElementName=LayersButton}" StaysOpen="False"
+                           AllowsTransparency="True" HorizontalOffset="-40" VerticalOffset="6">
+                        <Border Background="{DynamicResource PanelBrush}" BorderBrush="{DynamicResource StrokeBrush}"
+                                BorderThickness="1" CornerRadius="10" Padding="14,12" Effect="{DynamicResource CardShadow}">
+                            <StackPanel>
+                                <TextBlock Text="KATMANLAR" FontSize="10" FontWeight="Bold"
+                                           Foreground="{DynamicResource MutedBrush}" Margin="0,0,0,8"/>
+                                <CheckBox Content="İl sınırları" IsChecked="True" Margin="0,3" Foreground="{DynamicResource TextBrush}"
+                                          Checked="LayerProvinces" Unchecked="LayerProvinces"/>
+                                <CheckBox Content="Coğrafi adlar (deniz/ülke/bölge)" IsChecked="True" Margin="0,3" Foreground="{DynamicResource TextBrush}"
+                                          Checked="LayerGeo" Unchecked="LayerGeo"/>
+                                <CheckBox Content="Akış göstergeleri" IsChecked="True" Margin="0,3" Foreground="{DynamicResource TextBrush}"
+                                          Checked="LayerFlow" Unchecked="LayerFlow"/>
+                                <CheckBox Content="Koordinat ızgarası (enlem/boylam)" IsChecked="False" Margin="0,3" Foreground="{DynamicResource TextBrush}"
+                                          Checked="LayerGrid" Unchecked="LayerGrid"/>
+                            </StackPanel>
+                        </Border>
+                    </Popup>
+                    <ToggleButton x:Name="HealthViewButton" Style="{StaticResource GhostToggle}"
+                                  Padding="12,6" Margin="0,0,14,0">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="&#xE9D9;" FontFamily="Segoe MDL2 Assets" FontSize="12"
+                                       VerticalAlignment="Center" Margin="0,0,6,0"/>
+                            <TextBlock Text="Sağlık Görünümü" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </ToggleButton>
+                    <Popup PlacementTarget="{Binding ElementName=HealthViewButton}" Placement="Bottom"
+                           IsOpen="{Binding IsChecked, ElementName=HealthViewButton}" StaysOpen="False"
+                           AllowsTransparency="True" HorizontalOffset="-40" VerticalOffset="6">
+                        <Border Background="{DynamicResource PanelBrush}" BorderBrush="{DynamicResource StrokeBrush}"
+                                BorderThickness="1" CornerRadius="10" Padding="14,12" Effect="{DynamicResource CardShadow}">
+                            <StackPanel MinWidth="200">
+                                <TextBlock Text="İSTASYON DAİRESİ" FontSize="10" FontWeight="Bold"
+                                           Foreground="{DynamicResource MutedBrush}" Margin="0,0,0,6"/>
+                                <RadioButton x:Name="HvPie" GroupName="hv" Content="Pasta (ünite başına dilim)" Margin="0,3"
+                                             Foreground="{DynamicResource TextBrush}"
+                                             Checked="HealthMode_Changed"/>
+                                <RadioButton x:Name="HvAvg" GroupName="hv" Content="Ortalama" Margin="0,3"
+                                             Foreground="{DynamicResource TextBrush}"
+                                             Checked="HealthMode_Changed"/>
+                                <RadioButton x:Name="HvWorst" GroupName="hv" Content="En kötü" Margin="0,3"
+                                             Foreground="{DynamicResource TextBrush}"
+                                             Checked="HealthMode_Changed"/>
+
+                                <Border x:Name="OutlineSection" BorderBrush="{DynamicResource StrokeBrush}"
+                                        BorderThickness="0,1,0,0" Margin="0,10,0,0" Padding="0,10,0,0">
+                                    <StackPanel>
+                                        <TextBlock Text="PASTA KENAR RENGİ" FontSize="10" FontWeight="Bold"
+                                                   Foreground="{DynamicResource MutedBrush}" Margin="0,0,0,6"/>
+                                        <RadioButton x:Name="OaWorst" GroupName="oa" Content="En kötü" Margin="0,3"
+                                                     Foreground="{DynamicResource TextBrush}"
+                                                     Checked="OutlineAgg_Changed"/>
+                                        <RadioButton x:Name="OaAvg" GroupName="oa" Content="Ortalama" Margin="0,3"
+                                                     Foreground="{DynamicResource TextBrush}"
+                                                     Checked="OutlineAgg_Changed"/>
+
+                                        <TextBlock Text="DİLİM AYIRICISI" FontSize="10" FontWeight="Bold"
+                                                   Foreground="{DynamicResource MutedBrush}" Margin="0,10,0,6"/>
+                                        <Button Click="PickPieSepColor_Click" Style="{StaticResource GhostButton}"
+                                                HorizontalContentAlignment="Stretch" Padding="8,6">
+                                            <Grid>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="Auto"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Border x:Name="PieSepSwatch" Grid.Column="0" Width="32" Height="22"
+                                                        CornerRadius="4" Margin="0,0,10,0"
+                                                        BorderBrush="{DynamicResource StrokeBrush}" BorderThickness="1"/>
+                                                <TextBlock x:Name="PieSepHexText" Grid.Column="1" VerticalAlignment="Center"
+                                                           FontSize="11" Foreground="{DynamicResource TextBrush}"
+                                                           Text="Renk seç…"/>
+                                            </Grid>
+                                        </Button>
+                                        <Button Content="Tema varsayılanı" Click="ResetPieSepColor_Click"
+                                                Style="{StaticResource GhostButton}" Margin="0,6,0,0" Padding="6,4"
+                                                HorizontalAlignment="Left" FontSize="11"/>
+                                    </StackPanel>
+                                </Border>
+
+                                <TextBlock Text="Alarm her zaman en kötü üniteye bakar; eşik Ayarlar'dan."
+                                           FontSize="10" TextWrapping="Wrap" Margin="0,10,0,0"
+                                           Foreground="{DynamicResource MutedBrush}"/>
+                            </StackPanel>
+                        </Border>
+                    </Popup>
+                    <Button Click="OpenSettings_Click" Style="{StaticResource GhostButton}"
+                            Padding="12,6" Margin="0,0,14,0">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="&#xE713;" FontFamily="Segoe MDL2 Assets" FontSize="12"
+                                       VerticalAlignment="Center" Margin="0,0,6,0"/>
+                            <TextBlock Text="Ayarlar" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+                    <Border x:Name="AlarmBox" Background="#E74C3C" CornerRadius="6" Padding="10,5" Margin="0,0,14,0"
+                            Visibility="Collapsed">
+                        <TextBlock x:Name="AlarmText" FontSize="12" FontWeight="Bold" Foreground="#0F1620"/>
+                    </Border>
+                    <TextBlock x:Name="Clock" FontSize="13" Style="{StaticResource NumText}"
+                               Foreground="{DynamicResource MutedBrush}"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <!-- Harita + istasyon detay paneli -->
+        <Grid Grid.Row="1">
+            <pm:PipelineMapControl x:Name="Map" ClipToBounds="True"/>
+
+            <!-- Yuzen bolge cubugu: bir bolgeye zoom/izole et -->
+            <Border x:Name="RegionBarHost" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,12,0,0"
+                    Background="{DynamicResource PanelBrush}" Opacity="0.94"
+                    BorderBrush="{DynamicResource StrokeBrush}" BorderThickness="1"
+                    CornerRadius="10" Padding="8,5">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="&#xE81E;" FontFamily="Segoe MDL2 Assets" FontSize="12"
+                               Foreground="{DynamicResource MutedBrush}" VerticalAlignment="Center" Margin="2,0,8,0"/>
+                    <StackPanel x:Name="RegionBar" Orientation="Horizontal"/>
+                </StackPanel>
+            </Border>
+
+            <Border x:Name="Detail" Visibility="Collapsed"
+                    HorizontalAlignment="Right" VerticalAlignment="Stretch" Width="330"
+                    Background="{DynamicResource PanelBrush}" BorderBrush="{DynamicResource StrokeBrush}"
+                    BorderThickness="1,0,0,0">
+                <Border.RenderTransform>
+                    <TranslateTransform/>
+                </Border.RenderTransform>
+                <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+                <StackPanel Margin="18,16">
+                    <Grid>
+                        <StackPanel>
+                            <TextBlock x:Name="DetailId" FontSize="12" Foreground="{DynamicResource MutedBrush}"/>
+                            <TextBlock x:Name="DetailName" FontSize="17" FontWeight="SemiBold"
+                                       Foreground="{DynamicResource TextBrush}"/>
+                        </StackPanel>
+                        <Button Click="CloseDetail_Click" HorizontalAlignment="Right" VerticalAlignment="Top"
+                                Width="26" Height="24" Padding="0" Style="{StaticResource GhostButton}"
+                                ToolTip="Paneli kapat">
+                            <TextBlock Text="&#xE8BB;" FontFamily="Segoe MDL2 Assets" FontSize="10"/>
+                        </Button>
+                    </Grid>
+
+                    <Border x:Name="DetailStatusBox" CornerRadius="6" Padding="10,6" Margin="0,12,0,0" Background="#2ECC71">
+                        <TextBlock x:Name="DetailStatus" FontSize="13" FontWeight="Bold" Foreground="#0F1620"/>
+                    </Border>
+
+                    <!-- Petrol pompa istasyonu / terminali paneli (telemetri yok; kimlik + bagli hatlar).
+                         Bolum stili gaz deposu paneliyle (StoragePanel) tutarli: baslik + deger. -->
+                    <StackPanel x:Name="PumpPanel" Visibility="Collapsed">
+                        <TextBlock Text="TÜR" FontSize="10" Margin="0,14,0,2"
+                                   Foreground="{DynamicResource MutedBrush}"/>
+                        <TextBlock x:Name="DetailPumpType" FontSize="12.5" TextWrapping="Wrap"
+                                   Foreground="{DynamicResource TextBrush}"/>
+                        <TextBlock Text="BÖLGE" FontSize="10" Margin="0,10,0,2"
+                                   Foreground="{DynamicResource MutedBrush}"/>
+                        <TextBlock x:Name="DetailPumpRegion" FontSize="12.5"
+                                   Foreground="{DynamicResource TextBrush}"/>
+                        <TextBlock Text="BAĞLI HATLAR" FontSize="10" FontWeight="Bold" Margin="0,14,0,4"
+                                   Foreground="{DynamicResource MutedBrush}"/>
+                        <TextBlock x:Name="DetailPumpConns" FontSize="11.5" TextWrapping="Wrap"
+                                   Foreground="{DynamicResource TextBrush}"/>
+                    </StackPanel>
+
+                    <!-- Depo minimal paneli (gaz UGS + petrol deposu ortak): doluluk + bagli hatlar -->
+                    <StackPanel x:Name="StoragePanel" Visibility="Collapsed">
+                        <TextBlock Text="DEPO DOLULUK" FontSize="10" Margin="0,14,0,2"
+                                   Foreground="{DynamicResource MutedBrush}"/>
+                        <TextBlock x:Name="DetailStorageLevel" FontSize="15" Style="{StaticResource NumText}"
+                                   Foreground="{DynamicResource TextBrush}"/>
+                        <TextBlock Text="BAĞLI HATLAR" FontSize="10" FontWeight="Bold" Margin="0,14,0,4"
+                                   Foreground="{DynamicResource MutedBrush}"/>
+                        <TextBlock x:Name="DetailStorageConns" FontSize="11.5" TextWrapping="Wrap"
+                                   Foreground="{DynamicResource TextBrush}"/>
+                    </StackPanel>
+
+                    <!-- Gaz kompresör istasyonu: saglik + sensorler (yalnizca IsStation) -->
+                    <StackPanel x:Name="HealthPanel">
+
+                    <!-- Canli modda sunucunun yetkili degerlendirmesi (B ucu health_state); proxy'den ayri gosterilir -->
+                    <TextBlock x:Name="DetailServerHealth" FontSize="11" Margin="0,6,0,0" TextWrapping="Wrap"
+                               Foreground="{DynamicResource MutedBrush}" Visibility="Collapsed"/>
+
+                    <!-- Telemetri kalitesi (TelemetryBase.Quality); yalnizca GOOD disi durumda uyari olarak -->
+                    <TextBlock x:Name="DetailQuality" FontSize="11" FontWeight="SemiBold" Margin="0,4,0,0" TextWrapping="Wrap"
+                               Foreground="#E67E22" Visibility="Collapsed"/>
+
+                    <Grid Margin="0,12,0,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Grid.Column="0">
+                            <TextBlock Text="KALAN ÖMÜR (RUL)" FontSize="10" Foreground="{DynamicResource MutedBrush}"/>
+                            <TextBlock x:Name="DetailRul" FontSize="15" Style="{StaticResource NumText}"
+                                       Foreground="{DynamicResource TextBrush}"/>
+                        </StackPanel>
+                        <StackPanel Grid.Column="1">
+                            <TextBlock Text="SAĞLIK" FontSize="10" Foreground="{DynamicResource MutedBrush}"/>
+                            <TextBlock x:Name="DetailHealth" FontSize="15" Style="{StaticResource NumText}"
+                                       Foreground="{DynamicResource TextBrush}"/>
+                        </StackPanel>
+                    </Grid>
+
+                    <!-- Pasta modunda ünite başına sağlık kırılımı -->
+                    <StackPanel x:Name="UnitBreakdownPanel" Visibility="Collapsed" Margin="0,12,0,0">
+                        <TextBlock Text="ÜNİTE SAĞLIĞI" FontSize="10" FontWeight="Bold"
+                                   Foreground="{DynamicResource MutedBrush}" Margin="0,0,0,4"/>
+                        <ItemsControl x:Name="UnitBreakdownList">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid Margin="0,2">
+                                        <StackPanel Orientation="Horizontal">
+                                            <Ellipse Width="9" Height="9" Fill="{Binding Dot}" VerticalAlignment="Center" Margin="0,0,7,0"/>
+                                            <TextBlock Text="{Binding Name}" FontSize="11.5" Foreground="{DynamicResource TextBrush}"/>
+                                        </StackPanel>
+                                        <TextBlock Text="{Binding Value}" FontSize="11.5" HorizontalAlignment="Right"
+                                                   Typography.NumeralAlignment="Tabular" Foreground="{DynamicResource MutedBrush}"/>
+                                    </Grid>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </StackPanel>
+
+                    <Button x:Name="UnitsButton" Content="Üniteleri Aç" Click="OpenUnits_Click"
+                            AutomationProperties.AutomationId="UnitsButton"
+                            Style="{StaticResource GhostButton}" Margin="0,12,0,0" Padding="10,6"
+                            HorizontalAlignment="Left"/>
+
+                    <Grid Margin="0,16,0,2">
+                        <TextBlock Text="Titreşim" FontSize="11" Foreground="{DynamicResource MutedBrush}"/>
+                        <TextBlock x:Name="VibVal" HorizontalAlignment="Right" FontSize="12"
+                                   Style="{StaticResource NumText}" Foreground="#FFD166"/>
+                    </Grid>
+                    <c:MiniChart x:Name="VibChart" Height="46" Background="{DynamicResource TrackBrush}" LineBrush="#FFD166"/>
+
+                    <Grid Margin="0,10,0,2">
+                        <TextBlock Text="Yatak Sıcaklığı" FontSize="11" Foreground="{DynamicResource MutedBrush}"/>
+                        <TextBlock x:Name="BtVal" HorizontalAlignment="Right" FontSize="12"
+                                   Style="{StaticResource NumText}" Foreground="#FF6B6B"/>
+                    </Grid>
+                    <c:MiniChart x:Name="BtChart" Height="46" Background="{DynamicResource TrackBrush}" LineBrush="#FF6B6B"/>
+
+                    <Grid Margin="0,10,0,2">
+                        <TextBlock Text="Basma Basıncı" FontSize="11" Foreground="{DynamicResource MutedBrush}"/>
+                        <TextBlock x:Name="DpVal" HorizontalAlignment="Right" FontSize="12"
+                                   Style="{StaticResource NumText}" Foreground="#4ECDC4"/>
+                    </Grid>
+                    <c:MiniChart x:Name="DpChart" Height="46" Background="{DynamicResource TrackBrush}" LineBrush="#4ECDC4"/>
+
+                    <!-- Tum sensorler (yalnizca snapshot kaynaginda; en kotu unite) -->
+                    <TextBlock x:Name="SensorHeader" Visibility="Collapsed" Margin="0,18,0,6"
+                               FontSize="10" FontWeight="Bold" Foreground="{DynamicResource MutedBrush}"/>
+                    <ItemsControl x:Name="SensorList" Visibility="Collapsed">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <!-- Satir: ince ayirici; grup basligi ayiricisiz, vurgulu -->
+                                <Border x:Name="RowBd" BorderBrush="#1E3348"
+                                        BorderThickness="0,0,0,0.6" Padding="0,3">
+                                    <Grid>
+                                        <TextBlock x:Name="NameTb" Text="{Binding Name}" FontSize="11"
+                                                   Foreground="{DynamicResource MutedBrush}"/>
+                                        <TextBlock x:Name="ValTb" Text="{Binding Value}" FontSize="11"
+                                                   HorizontalAlignment="Right"
+                                                   Typography.NumeralAlignment="Tabular"
+                                                   Foreground="{DynamicResource TextBrush}"/>
+                                    </Grid>
+                                </Border>
+                                <DataTemplate.Triggers>
+                                    <DataTrigger Binding="{Binding IsHeader}" Value="True">
+                                        <Setter TargetName="RowBd" Property="BorderThickness" Value="0"/>
+                                        <Setter TargetName="RowBd" Property="Padding" Value="0,10,0,2"/>
+                                        <Setter TargetName="NameTb" Property="FontSize" Value="9.5"/>
+                                        <Setter TargetName="NameTb" Property="FontWeight" Value="Bold"/>
+                                        <Setter TargetName="NameTb" Property="Foreground" Value="{DynamicResource AccentBrush}"/>
+                                        <Setter TargetName="ValTb" Property="Visibility" Value="Collapsed"/>
+                                    </DataTrigger>
+                                    <!-- Nominal bant asimi: deger uyari/kritik renginde -->
+                                    <DataTrigger Binding="{Binding Alert}" Value="1">
+                                        <Setter TargetName="ValTb" Property="Foreground" Value="{StaticResource WarnBrush}"/>
+                                        <Setter TargetName="ValTb" Property="FontWeight" Value="SemiBold"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Alert}" Value="2">
+                                        <Setter TargetName="ValTb" Property="Foreground" Value="{StaticResource CriticalBrush}"/>
+                                        <Setter TargetName="ValTb" Property="FontWeight" Value="Bold"/>
+                                    </DataTrigger>
+                                </DataTemplate.Triggers>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                    </StackPanel>
+                </StackPanel>
+                </ScrollViewer>
+            </Border>
+        </Grid>
+
+        <!-- Alt bar: aciklama + secili dugum -->
+        <Border Grid.Row="2" Background="{DynamicResource PanelBrush}" Padding="18,10"
+                BorderBrush="{DynamicResource StrokeBrush}" BorderThickness="0,1,0,0">
+            <Grid>
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                    <!-- Kategori onay kutulari (dairesel): isaret kaldirilinca o tur gizlenir -->
+                    <CheckBox Tag="CS" IsChecked="True" Checked="CategoryToggle" Unchecked="CategoryToggle"
+                              Style="{StaticResource CircleCheck}" Background="#8CA3B8"
+                              VerticalAlignment="Center" Margin="0,0,8,0" ToolTip="İstasyonları göster/gizle">
+                        <TextBlock Text="İstasyon:" FontSize="11" Foreground="{DynamicResource MutedBrush}"/>
+                    </CheckBox>
+                    <Ellipse Width="10" Height="10" Fill="#2ECC71" Margin="0,0,4,0"/>
+                    <TextBlock Text="Sağlıklı" FontSize="11" Foreground="{DynamicResource TextBrush}" Margin="0,0,12,0" VerticalAlignment="Center"/>
+                    <Ellipse Width="10" Height="10" Fill="#F1C40F" Margin="0,0,4,0"/>
+                    <TextBlock Text="Uyarı" FontSize="11" Foreground="{DynamicResource TextBrush}" Margin="0,0,12,0" VerticalAlignment="Center"/>
+                    <Ellipse Width="10" Height="10" Fill="#E67E22" Margin="0,0,4,0"/>
+                    <TextBlock Text="Riskli" FontSize="11" Foreground="{DynamicResource TextBrush}" Margin="0,0,12,0" VerticalAlignment="Center"/>
+                    <Ellipse Width="10" Height="10" Fill="#E74C3C" Margin="0,0,4,0"/>
+                    <TextBlock Text="Kritik" FontSize="11" Foreground="{DynamicResource TextBrush}" Margin="0,0,20,0" VerticalAlignment="Center"/>
+
+                    <TextBlock Text="Düğüm:" FontSize="11" Foreground="{DynamicResource MutedBrush}"
+                               VerticalAlignment="Center" Margin="0,0,8,0"/>
+                    <CheckBox Tag="BORDER" IsChecked="True" Checked="CategoryToggle" Unchecked="CategoryToggle"
+                              Style="{StaticResource CircleCheck}" Background="#4E9BF5"
+                              VerticalAlignment="Center" Margin="0,0,12,0" ToolTip="Sınır düğümlerini göster/gizle">
+                        <TextBlock Text="Sınır" FontSize="11" Foreground="{DynamicResource TextBrush}"/>
+                    </CheckBox>
+                    <CheckBox Tag="OFFTAKE" IsChecked="True" Checked="CategoryToggle" Unchecked="CategoryToggle"
+                              Style="{StaticResource CircleCheck}" Background="#C58AF5"
+                              VerticalAlignment="Center" Margin="0,0,12,0" ToolTip="Çıkış düğümlerini göster/gizle">
+                        <TextBlock Text="Çıkış" FontSize="11" Foreground="{DynamicResource TextBrush}"/>
+                    </CheckBox>
+                    <CheckBox Tag="STORAGE" IsChecked="True" Checked="CategoryToggle" Unchecked="CategoryToggle"
+                              Style="{StaticResource CircleCheck}" Background="#4ECDC4"
+                              VerticalAlignment="Center" Margin="0,0,12,0" ToolTip="Depoları göster/gizle">
+                        <TextBlock Text="Depo" FontSize="11" Foreground="{DynamicResource TextBrush}"/>
+                    </CheckBox>
+                    <CheckBox Tag="OTHER" IsChecked="True" Checked="CategoryToggle" Unchecked="CategoryToggle"
+                              Style="{StaticResource CircleCheck}" Background="#8CA3B8"
+                              VerticalAlignment="Center" Margin="0,0,12,0" ToolTip="Kavşak / LNG / FSRU / terminal düğümlerini göster/gizle">
+                        <TextBlock Text="Diğer" FontSize="11" Foreground="{DynamicResource TextBrush}"/>
+                    </CheckBox>
+                    <CheckBox Tag="OIL" IsChecked="True" Checked="CategoryToggle" Unchecked="CategoryToggle"
+                              Style="{StaticResource CircleCheck}" Background="#9ABE3A"
+                              VerticalAlignment="Center" Margin="0,0,20,0" ToolTip="Petrol pompa istasyonları / terminalleri göster/gizle">
+                        <TextBlock Text="Petrol" FontSize="11" Foreground="{DynamicResource TextBrush}"/>
+                    </CheckBox>
+
+                    <TextBlock Text="Akış: düşük" FontSize="11" Foreground="#4ECDC4" VerticalAlignment="Center" Margin="0,0,4,0"/>
+                    <TextBlock Text="—&gt;" FontSize="11" Foreground="{DynamicResource MutedBrush}" VerticalAlignment="Center" Margin="0,0,4,0"/>
+                    <TextBlock Text="yüksek" FontSize="11" Foreground="#FF6B6B" VerticalAlignment="Center"/>
+                </StackPanel>
+
+                <TextBlock x:Name="SelectedInfo" HorizontalAlignment="Right" VerticalAlignment="Center"
+                           FontSize="12" Foreground="{DynamicResource MutedBrush}"
+                           Text="Bir istasyona tıklayın"/>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

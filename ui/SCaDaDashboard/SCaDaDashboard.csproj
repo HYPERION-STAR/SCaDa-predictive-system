@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    SCaDa Kestirimci Bakim - Kisi 3: C# Masaustu UI (WPF)
+    Endustriyel dashboard: saglik barlari, canli sensor grafikleri, alarm sistemi.
+    Su an SIMULE veri kaynagi kullanir (SimulatorDataSource).
+    Ileride Kisi 2'nin MQTT akisi + Kisi 1'in ONNX modeli baglanacak.
+  -->
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <LangVersion>latest</LangVersion>
+    <AssemblyName>SCaDaDashboard</AssemblyName>
+    <RootNamespace>SCaDaDashboard</RootNamespace>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <!-- Uygulama ikonu: koyu zemin + ag motifi (scratch uretimi, cok boyutlu) -->
+    <ApplicationIcon>app.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Sadelestirilmis il sinirlari (kaynak: alpers/Turkey-Maps-GeoJSON, Apache-2.0) -->
+    <EmbeddedResource Include="Pipeline\turkey.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- UseWindowsForms yalnizca ColorDialog icin; global using'leri kaldir ki
+         System.Drawing/Forms tipleri (Color, Point, Size, Pen, Brush) WPF
+         (System.Windows / System.Windows.Media) ile cakismasin. WinForms tipleri
+         kodda tam nitelikli kullanilir (System.Windows.Forms.ColorDialog vb.). -->
+    <Using Remove="System.Drawing" />
+    <Using Remove="System.Windows.Forms" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Kisi 2'nin resmi API istemcisi: /live_data poll (LiveDataService) +
+         /node/{id} (SCaDaApiClient). Canli veri yolu bu istemciden gecer. -->
+    <ProjectReference Include="..\..\SCaDaClient\SCaDaClient.csproj" />
+  </ItemGroup>
+
+</Project>

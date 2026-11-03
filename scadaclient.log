@@ -1,0 +1,2602 @@
+info: SCaDaClient.Services.PredictionService[0]
+      PredictionService baslatildi ÔÇö sliding window: 50, UseModelService: False
+info: SCaDaClient.Services.PredictionDbWriter[0]
+      PredictionDbWriter baslatildi — batch: 100, flush: 5000ms
+info: SCaDaClient.Services.PredictionDbWriter[0]
+      PredictionDbWriter PredictionReady'e baglandi
+SCaDa Canlı Veri Okuyucu başlatılıyor... (durdurmak için Ctrl+C)
+
+info: SCaDaClient.Services.LiveDataService[0]
+      LiveDataService başlatıldı — poll aralığı: 5s, BaseUrl: http://100.114.223.5:8000
+info: SCaDaClient.Services.AiRespondService[0]
+      AiRespondService başlatıldı — poll aralığı: 5s, BaseUrl: http://100.123.105.25:8010
+info: SCaDaClient.Services.AiForwardService[0]
+      AiForwardService kapalı — AiForward__TargetUrl ayarlanmamış. Satırlar ai_respond'da send_status='pending' olarak birikecek.
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://0.0.0.0:9000
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: /Users/derin/Desktop/scada_predictive_maintenance-DB
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 253.615ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 281.1168ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=428, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=313ms
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 638.3014ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 647.0237ms - 200
+[16:36:43] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 190.5067ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 190.6854ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=429, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=240ms
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1749, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 584.8554ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 584.9681ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 115.807ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 116.0051ms - 200
+[16:36:52] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 150.5129ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 150.643ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=430, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=204ms
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1750, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 395.0835ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 395.2435ms - 200
+[16:37:00] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 917.8415ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 918.0054ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=431, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=983ms
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1751, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 302.132ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 302.3087ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 100.3708ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 100.6292ms - 200
+[16:37:08] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 311.3751ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 311.5024ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=432, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=372ms
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1752, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 333.293ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 333.4492ms - 200
+[16:37:16] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 1857.5121ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 1857.6346ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=433, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=1934ms
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 140.3377ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 140.5454ms - 200
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1753, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 380.6955ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 380.8745ms - 200
+[16:37:24] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 99.3698ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 99.4715ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=434, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=249ms
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1754, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 375.8435ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 376.0607ms - 200
+[16:37:32] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[104]
+      HTTP request failed after 135.9434ms
+      System.Net.Http.HttpRequestException: An error occurred while sending the request.
+       ---> System.IO.IOException: Unable to read data from the transport connection: Connection reset by peer.
+       ---> System.Net.Sockets.SocketException (54): Connection reset by peer
+         --- End of inner exception stack trace ---
+         at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+         at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource<System.Int32>.GetResult(Int16 token)
+         at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+         --- End of inner exception stack trace ---
+         at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+         at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+         at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+         at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 1802.2179ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 2954.3259ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=435, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=3075ms
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 121.6052ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 121.775ms - 200
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1755, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 497.2255ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 497.4253ms - 200
+[16:37:39] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 1117.3823ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 1117.4737ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=436, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=1174ms
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1756, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 608.347ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 608.573ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 101.2654ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 101.4419ms - 200
+[16:37:49] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 110.887ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 110.9863ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=437, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=211ms
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1757, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 385.18ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 385.3777ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 104.3277ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 104.5729ms - 200
+[16:37:57] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 720.2312ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 720.3335ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=438, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=778ms
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1758, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 446.949ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 447.2273ms - 200
+[16:38:05] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 1094.3707ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 1094.4934ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=439, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=1149ms
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1759, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 300.8424ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 301.1554ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 200.5358ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 200.9501ms - 200
+[16:38:13] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 100.226ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 100.3444ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=440, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=179ms
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1760, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 524.7826ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 524.9213ms - 200
+[16:38:21] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 110.7123ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 110.7895ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1761, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 369.4283ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 369.5947ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 387.389ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 387.5323ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=441, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=453ms
+[16:38:28] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 547.7977ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 547.8797ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=442, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=639ms
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1762, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 314.4161ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 314.6769ms - 200
+[16:38:36] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 205.6984ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 205.783ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 100.4471ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 100.5641ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=443, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=182ms
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1763, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 238.1838ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 238.3367ms - 200
+[16:38:43] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 1727.9035ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 1727.9888ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=444, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=1833ms
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1764, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 445.3067ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 445.4238ms - 200
+[16:38:51] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 101.6505ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 101.7305ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 288.4868ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 288.8514ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=445, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=393ms
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1765, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 244.8304ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 244.9426ms - 200
+[16:38:59] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 100.367ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 100.4563ms - 200
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1766, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 461.4778ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 461.6232ms - 200
+[16:39:07] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 106.2335ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 106.3091ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=446, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=409ms
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1767, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 252.8311ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 252.9854ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 1629.143ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 1629.3147ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=447, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=1843ms
+[16:39:14] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 107.9285ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 108.0132ms - 200
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1768, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 385.8328ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 386.0028ms - 200
+[16:39:21] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 287.5032ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 287.5949ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=448, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=484ms
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 103.6337ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 103.7491ms - 200
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1769, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 714.679ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 714.8184ms - 200
+[16:39:29] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 397.2695ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 397.3705ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=449, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=535ms
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1770, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 373.748ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 373.9001ms - 200
+[16:39:37] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 100.1738ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 100.238ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 100.5888ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 100.6935ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=450, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=180ms
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1771, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 304.5981ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 304.7427ms - 200
+[16:39:45] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 646.9913ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 647.114ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=451, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=710ms
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1772, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 431.3778ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 431.4549ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 100.8858ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 101.0524ms - 200
+[16:39:53] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 349.3062ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 349.3845ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=452, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=606ms
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1773, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 320.2236ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 320.3496ms - 200
+[16:40:00] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 120.0656ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 120.1902ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 101.6205ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 101.7699ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=453, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=241ms
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1774, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 334.1561ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 334.276ms - 200
+[16:40:09] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 290.7097ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 290.8168ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=454, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=403ms
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1775, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 307.2824ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 307.3946ms - 200
+[16:40:17] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 100.0842ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 100.2773ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 109.6606ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 109.7359ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=455, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=210ms
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1776, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 385.7664ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 385.9744ms - 200
+[16:40:25] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 1202.3207ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 1202.41ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=456, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=1257ms
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1777, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 439.6345ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 439.754ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 102.7242ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 102.9581ms - 200
+[16:40:32] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 264.2226ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 264.2807ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=457, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=315ms
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1778, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 464.0625ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 464.1822ms - 200
+[16:40:41] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 179.1073ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 179.1637ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1779, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 104.2057ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 104.3446ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=458, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=227ms
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 381.8132ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 381.9172ms - 200
+[16:40:48] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 562.4482ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 562.5364ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=459, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=617ms
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1780, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 356.1142ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 356.2334ms - 200
+[16:40:56] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 100.3935ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 100.4619ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 333.878ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 333.985ms - 200
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1781, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=460, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=406ms
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 377.4432ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 377.5495ms - 200
+[16:41:04] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 1517.8413ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 1517.9074ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=461, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=1577ms
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1782, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 286.2401ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 286.3663ms - 200
+[16:41:11] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 108.8708ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 108.9378ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 107.2367ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 107.3392ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=462, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=171ms
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1783, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 377.4605ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 377.5404ms - 200
+[16:41:19] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 109.0142ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 109.3748ms - 200
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1784, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 371.093ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 371.2132ms - 200
+[16:41:27] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 99.4814ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 99.5486ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=463, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=165ms
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1785, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 1061.0505ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 1061.2332ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=464, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=1140ms
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 277.7271ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 277.8442ms - 200
+[16:41:34] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 100.5212ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 100.5867ms - 200
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1786, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 280.6979ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 280.8143ms - 200
+[16:41:41] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 365.17ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 365.2376ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=465, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=425ms
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 99.5377ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 99.6371ms - 200
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1787, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 480.2338ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 480.3592ms - 200
+[16:41:49] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 758.6946ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 758.7646ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=466, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=809ms
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1788, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 850.5976ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 850.8398ms - 200
+[16:41:57] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 1512.6536ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 1512.7205ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=467, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=1655ms
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 128.8162ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 128.9347ms - 200
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1789, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 314.3183ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 314.4247ms - 200
+[16:42:06] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 899.101ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 899.1787ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=468, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=954ms
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1790, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 108.4107ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 108.5786ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 415.682ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 415.7556ms - 200
+[16:42:13] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 103.2828ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 103.3534ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=469, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=163ms
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1791, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 501.9623ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 502.0851ms - 200
+[16:42:21] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 2220.3784ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 2220.4523ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=470, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=2277ms
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1792, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 154.1361ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 154.2218ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 281.709ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 281.8323ms - 200
+[16:42:29] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 100.4835ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 100.545ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=471, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=227ms
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1793, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 488.8513ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 489.1366ms - 200
+[16:42:37] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 144.2701ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 144.3597ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 190.0043ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 190.0918ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=472, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=247ms
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1794, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 449.6967ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 449.832ms - 200
+[16:42:45] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 1261.2455ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 1261.3915ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=473, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=1487ms
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1795, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 410.5659ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 410.679ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 102.6926ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 102.8405ms - 200
+[16:42:52] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 395.6347ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 395.7365ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=474, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=527ms
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1796, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 308.6085ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 308.815ms - 200
+[16:43:00] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 105.8787ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 105.9891ms - 200
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1797, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 105.0631ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 105.1627ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 357.9376ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 358.1098ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=475, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=370ms
+[16:43:08] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 698.4506ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 698.5702ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=476, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=867ms
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1798, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 543.7647ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 543.9091ms - 200
+[16:43:16] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 162.7685ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 162.9002ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 103.0299ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 103.3184ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=477, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=307ms
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1799, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 558.6186ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 558.7191ms - 200
+[16:43:25] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 1529.8019ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 1529.8798ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=478, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=1621ms
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1800, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 112.2955ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 112.9672ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 538.1548ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 538.3169ms - 200
+[16:43:34] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 98.511ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 98.5819ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=479, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=182ms
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1801, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 342.1318ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 342.2054ms - 200
+[16:43:41] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[104]
+      HTTP request failed after 138.9451ms
+      System.Net.Http.HttpRequestException: An error occurred while sending the request.
+       ---> System.IO.IOException: Unable to read data from the transport connection: Connection reset by peer.
+       ---> System.Net.Sockets.SocketException (54): Connection reset by peer
+         --- End of inner exception stack trace ---
+         at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+         at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource<System.Int32>.GetResult(Int16 token)
+         at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+         --- End of inner exception stack trace ---
+         at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+         at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+         at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+         at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 1271.1096ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 2414.6175ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=480, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=2489ms
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 99.9126ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 100.0116ms - 200
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1802, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 489.0646ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 489.1335ms - 200
+[16:43:49] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 491.1527ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 491.2275ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=481, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=680ms
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1803, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 332.759ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 332.8614ms - 200
+[16:43:56] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 100.999ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 101.0857ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 101.4539ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 101.5588ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=482, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=232ms
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1804, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 355.9593ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 356.1208ms - 200
+[16:44:04] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 1372.571ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 1372.6545ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=483, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=1496ms
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1805, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 413.8869ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 414.067ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 100.0279ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 100.2775ms - 200
+[16:44:12] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 349.7649ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 349.85ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=484, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=463ms
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1806, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 446.1808ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 446.2768ms - 200
+[16:44:20] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 105.4633ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 105.5653ms - 200
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1807, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 525.5404ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 525.6863ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 101.285ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 101.3925ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=485, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=291ms
+[16:44:28] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 105.7467ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 106.0444ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=486, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=258ms
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1808, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 387.5939ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 387.6647ms - 200
+[16:44:36] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 98.8449ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 98.9295ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 100.1406ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 100.2339ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=487, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=184ms
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1809, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 328.6822ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 328.799ms - 200
+[16:44:44] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 941.9004ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 942.2205ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=488, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=1016ms
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1810, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 450.9282ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 451.1402ms - 200
+[16:44:52] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 101.2938ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 101.4055ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 100.9948ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 101.0721ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=489, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=182ms
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1811, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 275.3663ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 275.5337ms - 200
+[16:44:59] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 1765.9845ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 1766.33ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=490, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=1822ms
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1812, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 279.8319ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 279.9318ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 98.9983ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 99.1122ms - 200
+[16:45:07] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 169.2561ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 169.393ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=491, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=233ms
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1813, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 258.7683ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 258.841ms - 200
+[16:45:15] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 100.2137ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 100.32ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 101.0679ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 101.208ms - 200
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1814, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=492, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=188ms
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 286.9032ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 286.978ms - 200
+[16:45:23] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 831.7307ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 831.8483ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=493, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=904ms
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1815, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 366.2697ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 366.4249ms - 200
+[16:45:31] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 102.1537ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 102.2613ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 103.0887ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 103.2483ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=494, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=174ms
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1816, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 590.2406ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 590.91ms - 200
+[16:45:39] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 1489.5243ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 1489.6509ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=495, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=1561ms
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1817, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 601.491ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 601.5755ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 157.8108ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 157.9791ms - 200
+[16:45:48] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 156.0295ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 156.175ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=496, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=208ms
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1818, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 323.2313ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 323.306ms - 200
+[16:45:56] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 101.7503ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 101.8453ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 103.8211ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 103.9787ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=497, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=169ms
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1819, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 375.8187ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 375.9273ms - 200
+[16:46:05] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 785.4955ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 785.6692ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=498, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=875ms
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1820, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 282.6779ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 282.7784ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 99.8744ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 99.9994ms - 200
+[16:46:12] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 333.477ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 333.6492ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=499, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=402ms
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1821, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 481.1893ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 481.2742ms - 200
+[16:46:20] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 1503.5212ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 1503.6272ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=500, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=1585ms
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1822, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 101.4128ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 101.561ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 411.9405ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 412.028ms - 200
+[16:46:28] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 308.0745ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 308.145ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=501, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=375ms
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1823, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 373.1149ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 373.3763ms - 200
+[16:46:36] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 125.4408ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 125.6029ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 104.3457ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 104.4354ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=502, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=158ms
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1824, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 325.6857ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 325.8987ms - 200
+[16:46:44] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 252.5116ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 252.598ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=503, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=305ms
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1825, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 397.4197ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 397.5135ms - 200
+[16:46:52] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 98.5997ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 98.6822ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 122.9407ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 123.0869ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=504, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=174ms
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1826, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 349.731ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 349.8297ms - 200
+[16:46:59] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 1474.9945ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 1475.0684ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=505, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=1525ms
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1827, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 369.1134ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 369.2302ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+[16:47:07] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 182.7325ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 182.8673ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 100.1621ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 100.3612ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=506, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=153ms
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1828, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 396.1277ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 396.1984ms - 200
+[16:47:15] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 101.166ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 101.2698ms - 200
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1829, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 101.0157ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 101.1142ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=507, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=171ms
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 629.8587ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 629.9642ms - 200
+[16:47:23] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 227.7001ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 227.7585ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=508, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=287ms
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1830, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 351.7145ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 351.8707ms - 200
+[16:47:31] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 98.8435ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 98.906ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 297.8885ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 298.4306ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=509, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=352ms
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1831, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 432.3541ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 432.4434ms - 200
+[16:47:39] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 1414.5686ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 1414.6621ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=510, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=1468ms
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1832, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 499.9902ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 500.095ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 102.0209ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 102.1637ms - 200
+[16:47:47] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 98.9404ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 99.001ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=511, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=156ms
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1833, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 352.7511ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 352.8841ms - 200
+[16:47:55] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 101.5255ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 101.5959ms - 200
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1834, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 456.6975ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 456.7733ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 103.4036ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 103.5019ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=512, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=146ms
+[16:48:03] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 1093.9044ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 1093.9663ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=513, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=1146ms
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1835, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 298.5685ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 298.6362ms - 200
+[16:48:10] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 99.056ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 99.1737ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 99.722ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 99.8341ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=514, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=159ms
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1836, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 278.6764ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 278.7709ms - 200
+[16:48:19] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 2119.6989ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 2119.9286ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=515, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=2172ms
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1837, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 358.5528ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 358.6444ms - 200
+[16:48:26] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 99.1848ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 99.2656ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 399.8569ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 399.9361ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=516, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=453ms
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1838, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 272.9633ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 273.0486ms - 200
+[16:48:34] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 104.3221ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 104.4116ms - 200
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1839, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 284.103ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 284.2067ms - 200
+[16:48:41] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 107.5679ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 107.6479ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=517, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=161ms
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1840, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 271.377ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 271.4966ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 1173.7405ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 1173.8307ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=518, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=1246ms
+[16:48:48] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 97.8548ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 97.9037ms - 200
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1841, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 479.0735ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 479.3464ms - 200
+[16:48:56] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 410.4882ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 410.6187ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=519, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=479ms
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 104.3168ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 104.4595ms - 200
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1842, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 394.0903ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 394.1811ms - 200
+[16:49:04] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 99.2482ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 99.335ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=520, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=168ms
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1843, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 444.5402ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 444.6197ms - 200
+[16:49:12] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 1122.9181ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 1123.013ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=521, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=1195ms
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 99.6761ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 99.7755ms - 200
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1844, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 492.1106ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 492.3409ms - 200
+[16:49:20] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 259.9761ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 260.122ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=522, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=338ms
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1845, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 273.0435ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 273.0977ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 103.2898ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 103.3926ms - 200
+[16:49:28] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 105.5922ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 105.6849ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=523, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=227ms
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1846, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 612.446ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 612.5183ms - 200
+[16:49:36] Canlı: 192 varlık (24 kompresör, 122 segment)
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 1416.6278ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 1416.6993ms - 200
+info: SCaDaClient.Services.AiRespondService[0]
+      [AI OK] respond_id=524, düğüm=24, segment=122, kritik=1, sızıntı=0, gecikme=1515ms
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[100]
+      Sending HTTP request GET http://100.123.105.25:8010/hub_state
+info: System.Net.Http.HttpClient.AiHubClient.ClientHandler[101]
+      Received HTTP response headers after 184.0872ms - 200
+info: System.Net.Http.HttpClient.AiHubClient.LogicalHandler[101]
+      End processing HTTP request after 184.185ms - 200
+info: SCaDaClient.Services.LiveDataService[0]
+      [DB OK] snapshot_id=1847, varlık=192, narrow_telemetri=1822, saklanan_snapshot=1000, hedef=127.0.0.1:3306/pipeline_digital_twin
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[100]
+      Start processing HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[100]
+      Sending HTTP request GET http://100.114.223.5:8000/api/scada/live_data
+info: System.Net.Http.HttpClient.SCaDaApiClient.ClientHandler[101]
+      Received HTTP response headers after 336.9605ms - 200
+info: System.Net.Http.HttpClient.SCaDaApiClient.LogicalHandler[101]
+      End processing HTTP request after 337.0579ms - 200
+[16:49:44] Canlı: 192 varlık (24 kompresör, 122 segment)

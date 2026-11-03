@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
@@ -19,7 +21,18 @@ public static class Program
 {
     public static async Task Main(string[] args)
     {
-        var host = Host.CreateDefaultBuilder(args)
+        // Yayın (AiServe) ayarlarını host kurulmadan önce oku — web host'un
+        // eklenip eklenmeyeceğine ve hangi adresi dinleyeceğine burada karar verilir.
+        var bootstrapConfig = new ConfigurationBuilder()
+            .SetBasePath(AppContext.BaseDirectory)
+            .AddJsonFile("appsettings.json", optional: true)
+            .AddEnvironmentVariables()
+            .Build();
+        var serveOptions =
+            bootstrapConfig.GetSection(AiServeOptions.SectionName).Get<AiServeOptions>()
+            ?? new AiServeOptions();
+
+        var hostBuilder = Host.CreateDefaultBuilder(args)
             .ConfigureAppConfiguration((context, config) =>
             {
                 // appsettings.json'i uygulama ikilisinin yanindan oku. Aksi halde
@@ -85,8 +98,51 @@ public static class Program
                 });
                 services.AddSingleton<PredictionService>();   // SnapshotReceived → /predict
                 services.AddSingleton<PredictionDbWriter>();   // PredictionReady → MySQL predictions
-            })
-            .Build();
+
+                // 7. AI hub zinciri: model servisi (/hub_state) → ai_respond log tablosu
+                services.Configure<AiHubOptions>(
+                    context.Configuration.GetSection(AiHubOptions.SectionName));
+                services.AddHttpClient<AiHubClient>((sp, client) =>
+                {
+                    var opt = sp.GetRequiredService<IOptions<AiHubOptions>>().Value;
+                    client.BaseAddress = new Uri(opt.BaseUrl);
+                    client.Timeout = TimeSpan.FromSeconds(opt.TimeoutSeconds);
+                    client.DefaultRequestHeaders.Accept.Add(
+                        new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+                })
+                .AddTransientHttpErrorPolicy(policy =>
+                    policy.WaitAndRetryAsync(3, attempt =>
+                        TimeSpan.FromMilliseconds(500 * Math.Pow(2, attempt))));
+                services.AddSingleton<AiRespondRepository>();
+                services.AddSingleton<AiRespondService>();
+                services.AddHostedService(sp => sp.GetRequiredService<AiRespondService>());
+
+                // 8. Gönderim: ai_respond (pending) → karşı bilgisayara HTTP POST
+                services.Configure<AiForwardOptions>(
+                    context.Configuration.GetSection(AiForwardOptions.SectionName));
+                services.AddHttpClient<AiForwardService>((sp, client) =>
+                {
+                    var opt = sp.GetRequiredService<IOptions<AiForwardOptions>>().Value;
+                    client.Timeout = TimeSpan.FromSeconds(opt.TimeoutSeconds);
+                });
+                services.AddHostedService(sp => sp.GetRequiredService<AiForwardService>());
+
+                // 9. Yayın: karşı bilgisayar ai_respond'u HTTP ile çeksin
+                services.Configure<AiServeOptions>(
+                    context.Configuration.GetSection(AiServeOptions.SectionName));
+                services.AddRouting();
+            });
+
+        if (serveOptions.Enabled)
+        {
+            hostBuilder.ConfigureWebHostDefaults(web =>
+            {
+                web.UseUrls($"http://{serveOptions.BindAddress}:{serveOptions.Port}");
+                web.Configure(AiServeEndpoints.Map);
+            });
+        }
+
+        var host = hostBuilder.Build();
 
         // --- UI bağlama noktası (örnek) ---
         // Gerçek uygulamada burada harita/detay paneli UI thread'i bağlanır:

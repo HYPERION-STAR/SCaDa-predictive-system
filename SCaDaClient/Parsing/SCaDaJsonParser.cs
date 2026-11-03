@@ -26,7 +26,7 @@ public sealed class SCaDaJsonParser
     }
 
     /// <summary>
-    /// A endpoint (/api/SCaDa/live_data) yanıtını parse eder.
+    /// A endpoint (/api/scada/live_data) yanıtını parse eder.
     /// Gerçek sunucu düz harita döndürür: { "entity_id": { entity_type, s_*, ... }, ... }
     /// TelemetryConverter entity_type'a göre doğru DTO'yu seçer.
     /// </summary>
@@ -45,7 +45,7 @@ public sealed class SCaDaJsonParser
     }
 
     /// <summary>
-    /// B endpoint (/api/SCaDa/node/{id}) yanıtını parse eder.
+    /// B endpoint (/api/scada/node/{id}) yanıtını parse eder.
     /// </summary>
     public async Task<NodeDetail> ParseNodeDetailAsync(Stream stream, CancellationToken ct = default)
     {

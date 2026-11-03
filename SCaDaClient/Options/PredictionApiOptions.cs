@@ -9,7 +9,7 @@ public sealed class PredictionApiOptions
     public const string SectionName = "PredictionApi";
 
     /// <summary>Tahmin servisi adresi</summary>
-    public string BaseUrl { get; set; } = "http://100.123.105.25:8010";
+    public string BaseUrl { get; set; } = "http://100.114.223.5:8010";
 
     /// <summary>HTTP istek zaman a┼ƒ─▒m─▒ (saniye) ÔÇö F1'de 1-2 sn ├Ânerilir (┬º12 D-S1)</summary>
     public int TimeoutSeconds { get; set; } = 10;

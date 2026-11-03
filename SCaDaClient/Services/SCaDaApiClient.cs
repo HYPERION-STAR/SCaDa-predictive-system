@@ -22,7 +22,7 @@ public sealed class SCaDaApiClient : IDisposable
     }
 
     /// <summary>
-    /// A endpoint: Tüm ağın anlık görüntüsü (/api/SCaDa/live_data).
+    /// A endpoint: Tüm ağın anlık görüntüsü (/api/scada/live_data).
     /// Gerçek sunucu düz harita döndürür: { "entity_id": { entity_type, s_*, ... }, ... }
     /// ResponseHeadersRead: büyük gövde bellek dolmadan akıtılır.
     /// </summary>
@@ -31,7 +31,7 @@ public sealed class SCaDaApiClient : IDisposable
         if (_disposed) throw new ObjectDisposedException(nameof(SCaDaApiClient));
 
         using var resp = await _http.GetAsync(
-            "/api/SCaDa/live_data",
+            "/api/scada/live_data",
             HttpCompletionOption.ResponseHeadersRead, ct);
         resp.EnsureSuccessStatusCode();
 
@@ -50,13 +50,13 @@ public sealed class SCaDaApiClient : IDisposable
     }
 
     /// <summary>
-    /// B endpoint: Tek düğümün detayı (/api/SCaDa/node/{nodeId}).
+    /// B endpoint: Tek düğümün detayı (/api/scada/node/{nodeId}).
     /// </summary>
     public async Task<NodeDetail> GetNodeAsync(string nodeId, CancellationToken ct = default)
     {
         if (_disposed) throw new ObjectDisposedException(nameof(SCaDaApiClient));
 
-        using var resp = await _http.GetAsync($"/api/SCaDa/node/{Uri.EscapeDataString(nodeId)}", ct);
+        using var resp = await _http.GetAsync($"/api/scada/node/{Uri.EscapeDataString(nodeId)}", ct);
         resp.EnsureSuccessStatusCode();
 
         await using var stream = await resp.Content.ReadAsStreamAsync(ct);

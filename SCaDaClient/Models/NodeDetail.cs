@@ -5,7 +5,7 @@ using SCaDaClient.Models.Telemetry;
 namespace SCaDaClient.Models;
 
 /// <summary>
-/// B endpoint (/api/SCaDa/node/{id}) kök modeli — düz yapı (§11.3 D2).
+/// B endpoint (/api/scada/node/{id}) kök modeli — düz yapı (§11.3 D2).
 /// Gerçek sunucu: { node_id, name, region, health_state, telemetry, live_equipment }
 /// [JsonExtensionData] ile bilinmeyen alanlar yutulur — sunucu alan eklerse istemci kırılmaz.
 /// </summary>
